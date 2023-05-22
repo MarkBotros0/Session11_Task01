@@ -25,11 +25,14 @@ $(document).ready(function () {
             $(card).css("border-color", "#ff0000")
             usernameSection.append(youtubeIcon);
         } else if (data[i].platform == "instagram") {
-            var instagramIcon = $("<i class='fa-brands fa-instagram' style='color: #fe8a06;'></i>")
+            var instagramWrapper = $("<div style='width:20px; height:20px'></div>")
+            var instagramIcon = $("<img src='./instagram.png' class='img-fluid'>")
+
+            instagramWrapper.append(instagramIcon)
             $(card).removeClass("my-custom-card").addClass("my-custom-instagram-card-light").addClass("toggle-card-theme-insta").removeClass("card-light")
-            usernameSection.append(instagramIcon);
+            usernameSection.append(instagramWrapper);
         }
-        usernameSection.append(username)
+        usernameSection.append(username).css("margin-bottom","30px").css("margin-top","32px")
         todaySection.append(caretUp, today)
         $(col).append(card.append(usernameSection).append(noOfFollowers).append(followers).append(todaySection))
         $(".rendered-cards").append(col)
