@@ -22,13 +22,11 @@ $(document).ready(function () {
         var oldValues = JSON.parse(localStorage.getItem("Data"))
 
         if (oldValues != null) {
-            oldValues = [...oldValues, newObject]
+            oldValues.push(newObject)
             localStorage.setItem("Data", JSON.stringify(oldValues))
         } else {
             localStorage.setItem("Data", JSON.stringify([newObject]))
         }
-        //debugger
-        // localStorage.setItem("values", JSON.stringify(inputs))
     });
 
 });
