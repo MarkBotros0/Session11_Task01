@@ -25,9 +25,9 @@ $(document).ready(function () {
             $(card).css("border-color", "#ff0000")
             usernameSection.append(youtubeIcon);
         } else if (data[i].platform == "instagram") {
-            var instagramWrapper = $("<div style='width:20px; height:20px'></div>")
+            var instagramWrapper = $("<div style='width:20px; height:20px; margin-bottom:5px;'></div>")
             var instagramIcon = $("<img src='./instagram.png' class='img-fluid'>")
-
+            
             instagramWrapper.append(instagramIcon)
             $(card).removeClass("my-custom-card").addClass("my-custom-instagram-card-light").addClass("toggle-card-theme-insta").removeClass("card-light")
             usernameSection.append(instagramWrapper);
@@ -49,11 +49,4 @@ $(document).ready(function () {
         $(".toggle-title-2").toggleClass("text-white").toggleClass("text-secondary")
 
     })
-
-
-
-
-
-
-
 });
